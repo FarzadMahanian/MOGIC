@@ -1,0 +1,93 @@
+.app-container {
+  max-width: 1200px;
+  margin: 24px auto;
+}
+
+.app-loading {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loading-icon {
+    font-size: 30px;
+    color: #108ee9;
+  }
+}
+
+.ant-carousel {
+  .slick-arrow {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    z-index: 10;
+    opacity: 0.3;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent
+        url(https://cdn.iconscout.com/icon/free/png-512/back-arrow-1767523-1502427.png)
+        no-repeat center center;
+      background-size: cover;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.slick-next {
+      right: -30px;
+      transform: rotate(180deg);
+    }
+
+    &.slick-prev {
+      left: -30px;
+    }
+  }
+
+  .slick-dots {
+    bottom: -30px;
+
+    li {
+      button {
+        background: #000;
+      }
+
+      &.slick-active {
+        button {
+          background: #000;
+        }
+      }
+    }
+  }
+}
+
+.app-gallery {
+  .gallery-item {
+    position: relative;
+    min-height: 150px;
+
+    &:hover {
+      .ant-typography {
+        background-color: rgba(#000, 0.7);
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+
+    .ant-typography {
+      background-color: rgba(#000, 0.3);
+      position: absolute;
+      opacity: 0;
+      left: 0;
+      right: 0;
+      bottom: -100px;
+      padding: 12px;
+      color: #fff;
+      transition: all 0.3s ease-out 0s;
+      cursor: default;
+    }
+  }
+}
